@@ -13,8 +13,23 @@ int counter = 0;
 int aState;
 int aLastState;
 
-
-
+//Prueba JoyStick emulando Throttle con encoder
+Joystick_ joystick(JOYSTICK_DEFAULT_REPORT_ID,
+                   JOYSTICK_TYPE_JOYSTICK,
+                   0,    // Número de botones
+                   0,    // Número de hat switches
+                   false, // Incluir eje X
+                   false, // Incluir eje Y
+                   false, // Incluir eje Z
+                   false, // Incluir eje RX
+                   false, // Incluir eje RY
+                   false, // Incluir eje RZ
+                   true,  // Incluir Throttle
+                   true,  // Incluir Accelerator
+                   true,  // Incluir Brake
+                   true,  // Incluir Steering
+                   true); // Incluir Rudder
+                   
 void setup() {
   pinMode (outputA, INPUT); //Lee 1 y 0
   pinMode (outputB, INPUT); //Lee 1 Y 0
